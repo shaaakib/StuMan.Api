@@ -17,6 +17,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("StuManConnection
 ));
 
 builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<IClassRepository, ClassRepository>();
 
 var app = builder.Build();
 
