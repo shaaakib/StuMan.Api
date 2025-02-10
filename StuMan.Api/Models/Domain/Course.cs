@@ -13,6 +13,9 @@ namespace StuMan.Api.Models.Domain
 
         [Required, MaxLength(10)]
         public string CourseCode { get; set; }
+        [ForeignKey("Teacher")]
+        public int TeacherId { get; set; }
+        public Teacher Teacher { get; set; }
 
         public ICollection<StudentCourse> StudentCourses { get; set; } = new List<StudentCourse>();
     }
